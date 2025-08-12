@@ -46,6 +46,6 @@ app.get(`/`, (res,req) => {
 
 module.exports=app
 
-app.listen (this.prototype, () => {
+app.listen (PORT, () => {
     console.log(`Server listening at http://localhost:${PORT}`);
 });
