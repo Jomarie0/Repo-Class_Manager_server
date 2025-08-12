@@ -1,4 +1,4 @@
-const express = require(`express`)
+const express = require(`express`);
 
 const app = express();
 const PORT = 3000;
@@ -13,8 +13,8 @@ app.get(`/users`, (req,res) => {
     const { firstName, lastName, section, status } = req.body;
     const userIndex = users.findIndex(user => user.firstName === firstName && user.lastName === lastName);
 
-    if (userIndex !==-1) {
-        users[userIndex].status = status;
+    if (userIndex !== -1) {
+        user[userIndex].status = status;
         console.log(`Updated attendance for ${lastName} ${firstName} to: ${status} `);
         res.status(200).json({message: `Attendance for ${lastName} ${lastName} has been updated to ${'status'}. `});
     } else {
