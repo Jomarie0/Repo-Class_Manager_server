@@ -16,7 +16,7 @@ app.get(`/users`, (req,res) => {
     if (userIndex !== -1) {
         user[userIndex].status = status;
         console.log(`Updated attendance for ${lastName} ${firstName} to: ${status} `);
-        res.status(200).json({message: `Attendance for ${lastName} ${lastName} has been updated to ${'status'}. `});
+        res.status(200).json({message: `Attendance for ${lastName} ${lastName} has been updated to ${status}. `});
     } else {
         const newUser = {
             id: user.length +1,
@@ -28,7 +28,7 @@ app.get(`/users`, (req,res) => {
         };
         users.push(newUser);
         console.log(`New user Added ${lastName} ${firstName} to: ${status} `);
-        res.status(201).json({message: `New Student ${lastName} ${lastName} has been added with status: ${'status'}. `});
+        res.status(201).json({message: `New Student ${lastName} ${lastName} has been added with status: ${status}. `});
 
     };
 
