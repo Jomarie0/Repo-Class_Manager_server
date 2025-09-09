@@ -13,7 +13,7 @@ let users = [
 //     res.status(200).json(users);
 // });
 
-app.get(`/users`, (req,res) => {
+app.post(`/users`, (req,res) => {
     const { firstName, lastName, section, status } = req.body;
     const userIndex = users.findIndex(user => user.firstName === firstName && user.lastName === lastName);
 
@@ -50,4 +50,5 @@ module.exports=app
 app.listen (PORT, () => {
     console.log(`Server listening at http://localhost:${PORT}`);
 });
+
 
